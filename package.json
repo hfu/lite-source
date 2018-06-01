@@ -1,0 +1,23 @@
+{
+  "name": "lite-source",
+  "version": "1.0.0",
+  "description": "Spatialite GeoJSON feature source",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hfu/lite-source.git"
+  },
+  "author": "",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/hfu/lite-source/issues"
+  },
+  "homepage": "https://github.com/hfu/lite-source#readme",
+  "dependencies": {
+    "spatialite": "^0.1.0",
+    "wkx": "^0.4.5"
+  }
+}

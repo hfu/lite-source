@@ -1,4 +1,5 @@
 const sqlite = require('spatialite')
+const wkx = require('wkx')
 const fs = require('fs')
 
 if (process.argv.length !== 3) {
@@ -14,8 +15,9 @@ if (process.argv.length !== 3) {
 const db = new sqlite.Database(process.argv[2])
 db.spatialite(err => {
   if (err) throw err
-  db.each('SELECT AsGeoJSON(GEOMETRY) FROM points', (err, row) => {
+  db.each('SELECT * FROM lines', (err, row) => {
     if (err) throw err
-    console.log(row)
+    // console.log(row)
+    console.log(wkx.Geometry.parse(row.GEOMETRY).toGeoJSON())
   })
 })
